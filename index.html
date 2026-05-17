@@ -3,219 +3,228 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>银级会员工具 — 宇守信咨询</title>
+<title>🥈 银级会员 · 专业合规 — 宇守信咨询</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-  background: #f5f7fa; color: #333;
-}
-.header {
-  background: linear-gradient(135deg, #64748b, #94a3b8);
-  color: white; padding: 36px 20px 28px; text-align: center;
-}
-.header .badge {
-  display: inline-block; background: rgba(255,255,255,0.2); border-radius: 20px;
-  padding: 4px 14px; font-size: 11px; margin-bottom: 12px; letter-spacing: 1px;
-}
-.header h1 { font-size: 24px; font-weight: 800; margin-bottom: 6px; }
-.header .subtitle { font-size: 14px; opacity: 0.85; }
-.header .price-tag {
-  display: inline-block; margin-top: 12px; background: rgba(255,255,255,0.15);
-  border-radius: 20px; padding: 6px 18px; font-size: 13px;
-}
-.section { padding: 28px 16px; max-width: 800px; margin: 0 auto; }
-.section-title { text-align: center; margin-bottom: 24px; }
-.section-title h2 { font-size: 20px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; display: flex; align-items: center; justify-content: center; gap: 8px; }
-.section-title p { font-size: 13px; color: #888; }
-/* 工具卡片 */
-.tool-grid { display: flex; flex-direction: column; gap: 16px; }
-.tool-card {
-  background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  display: flex; flex-direction: column;
-}
-.tool-card-body { padding: 24px 20px 20px; flex: 1; display: flex; flex-direction: column; }
-.tool-icon { font-size: 36px; margin-bottom: 8px; }
-.tool-name { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
-.tool-desc { font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 12px; flex: 1; }
-.tool-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
-.tag { font-size: 11px; padding: 3px 10px; border-radius: 12px; background: #f0f0f0; color: #666; }
-.tag.primary { background: #e8f0fe; color: #1a73e8; }
-.tag.green { background: #e6f7e6; color: #16a34a; }
-.btn {
-  display: inline-block; padding: 10px 24px; border-radius: 8px;
-  font-size: 14px; font-weight: 600; text-decoration: none; text-align: center; cursor: pointer; border: none;
-}
-.btn-primary { background: #64748b; color: white; }
-.btn-primary:hover { background: #475569; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f0f4f9;color:#333;padding-bottom:20px}
+
+/* 头部 - 深蓝渐变主题 */
+.header{background:linear-gradient(135deg,#0c1445,#1a3a6b,#2b5a9e);color:white;padding:32px 20px 28px;text-align:center;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 30% 80%,rgba(100,180,255,.12) 0%,transparent 60%);pointer-events:none}
+.header .badge{display:inline-block;background:rgba(255,255,255,.18);backdrop-filter:blur(4px);border-radius:20px;padding:5px 16px;font-size:12px;margin-bottom:10px;letter-spacing:1px;border:1px solid rgba(255,255,255,.1)}
+.header h1{font-size:24px;font-weight:800;margin-bottom:4px}
+.header .subtitle{font-size:13px;opacity:.85;margin-bottom:6px}
+.header .price{font-size:32px;font-weight:800;margin:8px 0 2px;letter-spacing:-0.5px}
+.header .price span{font-size:15px;font-weight:400;opacity:.75}
+.header .hint{font-size:11px;opacity:.6;margin-top:6px}
+
+.section{padding:20px 12px;max-width:720px;margin:0 auto}
+.section-title{text-align:center;margin-bottom:18px}
+.section-title h2{font-size:19px;font-weight:700;color:#0c1445}
+.section-title p{font-size:12px;color:#888;margin-top:3px}
+
+/* 核心权益亮点 */
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+@media (max-width:420px){.perks{grid-template-columns:1fr}}
+.perk-card{background:white;border-radius:14px;padding:16px 12px;text-align:center;box-shadow:0 2px 8px rgba(15,30,60,.06);transition:transform .15s,box-shadow .15s}
+.perk-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(15,30,60,.1)}
+.perk-card .icon{font-size:26px;margin-bottom:4px}
+.perk-card .num{font-size:20px;font-weight:800;color:#1a3a6b}
+.perk-card .label{font-size:11px;color:#888;margin-top:3px;line-height:1.4}
+
+/* 适用对象 */
+.target-box{background:white;border-radius:16px;padding:20px;margin-bottom:24px;box-shadow:0 2px 8px rgba(15,30,60,.06)}
+.target-box .title{font-size:15px;font-weight:700;color:#0c1445;margin-bottom:10px}
+.target-box .item{font-size:13px;color:#555;line-height:2;padding:2px 0;display:flex;align-items:center;gap:6px}
+.target-box .item::before{content:'✅'}
+
+/* 工具两列网格 */
+.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+@media (max-width:420px){.tool-grid{grid-template-columns:1fr}}
+
+.tool-card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(15,30,60,.05);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.tool-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(15,30,60,.1)}
+.tool-card-body{padding:20px 18px 16px;flex:1;display:flex;flex-direction:column}
+.tool-icon{font-size:34px;margin-bottom:8px}
+.tool-name{font-size:15px;font-weight:700;color:#0c1445;margin-bottom:6px}
+.tool-desc{font-size:12px;color:#666;line-height:1.7;margin-bottom:12px;flex:1}
+.tool-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px}
+.tag{font-size:10px;padding:3px 10px;border-radius:12px;background:#f0f0f0;color:#666}
+.tag.silver{background:#eef2ff;color:#1a3a6b;font-weight:600}
+.tag.green{background:#e6f7e6;color:#16a34a}
+.tag.blue{background:#e0f2fe;color:#0369a1}
+.btn{display:inline-block;padding:9px 18px;border-radius:10px;font-size:13px;font-weight:600;text-decoration:none;text-align:center;cursor:pointer;border:none;transition:.15s}
+.btn-primary{background:linear-gradient(135deg,#1a3a6b,#2b5a9e);color:white;box-shadow:0 2px 6px rgba(42,90,158,.25)}
+.btn-primary:active{transform:scale(.97);box-shadow:0 1px 3px rgba(42,90,158,.2)}
+
 /* 服务清单 */
-.service-list { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-.service-item {
-  display: flex; align-items: center; gap: 10px;
-  padding: 14px 16px; border-bottom: 1px solid #f5f5f5; font-size: 14px; color: #444;
-}
-.service-item:last-child { border-bottom: none; }
-.service-item .check { color: #16a34a; font-weight: 700; font-size: 16px; }
-.service-item .label { flex: 1; }
-/* 引导条 */
-.upsell-banner {
-  background: linear-gradient(135deg, #b8860b, #d4a843);
-  color: white; text-align: center; padding: 32px 20px; border-radius: 16px; margin-top: 20px;
-}
-.upsell-banner h3 { font-size: 18px; margin-bottom: 6px; }
-.upsell-banner p { font-size: 13px; opacity: 0.9; margin-bottom: 14px; }
-.upsell-banner .btn { background: white; color: #b8860b; display: inline-block; }
-.footer { text-align: center; padding: 24px; font-size: 12px; color: #999; }
+.service-list{background:white;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(15,30,60,.05);margin-bottom:24px}
+.service-list-title{background:linear-gradient(135deg,#0c1445,#1a3a6b);color:white;padding:14px 18px;font-size:14px;font-weight:700;display:flex;align-items:center;gap:8px}
+.service-list-title .sub{font-weight:400;font-size:11px;opacity:.7;margin-left:auto}
+.service-item{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid #f0f3f7;font-size:13px;color:#444}
+.service-item:last-child{border-bottom:none}
+.service-item .check{color:#16a34a;font-weight:700;font-size:15px;width:16px;text-align:center}
+.service-item .label{flex:1;line-height:1.5}
+.service-item .tag-new{font-size:9px;padding:2px 8px;border-radius:10px;background:#eef2ff;color:#1a3a6b;font-weight:600;white-space:nowrap}
+
+/* 会员方案大按钮 */
+.membership-cta{background:linear-gradient(135deg,#0c1445,#1a3a6b,#0c1445);color:white;text-align:center;padding:30px 20px;border-radius:16px;margin-bottom:16px;position:relative;overflow:hidden}
+.membership-cta::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 70% 30%,rgba(100,180,255,.1) 0%,transparent 50%);pointer-events:none}
+.membership-cta h3{font-size:18px;font-weight:700;margin-bottom:6px}
+.membership-cta p{font-size:12px;opacity:.8;margin-bottom:14px;line-height:1.6}
+.membership-cta .btn-cta{display:inline-block;background:white;color:#1a3a6b;padding:11px 30px;border-radius:12px;font-size:14px;font-weight:700;text-decoration:none;transition:.15s}
+.membership-cta .btn-cta:active{transform:scale(.97)}
+
+/* 升级金级 */
+.upsell-banner{background:linear-gradient(135deg,#4a1a6b,#793a9e);color:white;text-align:center;padding:28px 20px;border-radius:16px;margin-bottom:16px;position:relative;overflow:hidden}
+.upsell-banner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 30% 80%,rgba(200,160,255,.12) 0%,transparent 60%);pointer-events:none}
+.upsell-banner h3{font-size:17px;margin-bottom:4px}
+.upsell-banner p{font-size:12px;opacity:.9;margin-bottom:12px}
+.upsell-banner .btn{background:white;color:#4a1a6b;display:inline-block}
+
+.footer{text-align:center;padding:20px 16px;font-size:11px;color:#999}
 </style>
 </head>
 <body>
 
 <div class="header">
   <div class="badge">🥈 银级 · 专业合规</div>
-  <h1>会员专属工具箱</h1>
-  <div class="subtitle">¥29,999/年 · 成长型企业专属 · 纳税申报审核+税务复核+线上咨询+季度上门</div>
-  <div class="price-tag">您身边的财税专家 — 洪淳宇</div>
+  <h1>银级会员</h1>
+  <div class="subtitle">成长型企业财税合规与风险管控专业方案</div>
+  <div class="price">¥29,999 <span>/年</span></div>
+  <div class="hint">日均仅需 ¥82 · 专业团队为您的企业合规保驾护航</div>
 </div>
 
 <div class="section">
-  <div class="section-title">
-    <h2>🔧 银级会员 · 专属工具</h2>
-    <p>以下 6 大专属工具已包含在您的银级会员服务中</p>
+
+  <!-- 核心数据 -->
+  <div class="perks">
+    <div class="perk-card"><div class="icon">🛡️</div><div class="num">6</div><div class="label">大专属检测工具</div></div>
+    <div class="perk-card"><div class="icon">💬</div><div class="num">不限次</div><div class="label">线上财税咨询</div></div>
+    <div class="perk-card"><div class="icon">📅</div><div class="num">季度</div><div class="label">上门深度服务</div></div>
+    <div class="perk-card"><div class="icon">📋</div><div class="num">2项/年</div><div class="label">专项筹划</div></div>
+    <div class="perk-card"><div class="icon">⚡</div><div class="num">24h</div><div class="label">极速响应</div></div>
+    <div class="perk-card"><div class="icon">👥</div><div class="num">7×12h</div><div class="label">专属服务群</div></div>
   </div>
 
+  <!-- 适用对象 -->
+  <div class="target-box">
+    <div class="title">🎯 适合这样的企业</div>
+    <div class="item">年营收 500 万 ~ 5千万的成长型企业</div>
+    <div class="item">有财务人员但需要专业指导支持</div>
+    <div class="item">业务扩张期税务合规需求快速增加</div>
+    <div class="item">对代账公司服务质量不放心，需要深度把控</div>
+  </div>
+
+  <!-- 工具 -->
+  <div class="section-title">
+    <h2>🔧 银级专属工具（6大核心）</h2>
+    <p>点击即用，每一步都为您规避税务风险</p>
+  </div>
   <div class="tool-grid">
-
     <div class="tool-card">
       <div class="tool-card-body">
-        <div class="tool-icon">📋</div>
-        <div class="tool-name">企业税负自查表</div>
-        <div class="tool-desc">多行业税负标准自动匹配，系统比对增值税/所得税/综合税负率，即时生成税负健康报告与行业排名。帮助成长型企业快速定位税负异常，识别稽查风险。</div>
-        <div class="tool-tags">
-          <span class="tag primary">银级专属</span>
-          <span class="tag green">6大行业</span>
-          <span class="tag">增值税</span>
-          <span class="tag">所得税</span>
-        </div>
-        <a href="https://sparrow528.github.io/tax-checkup/" class="btn btn-primary" target="_blank">👉 进入工具</a>
+        <div class="tool-icon">🔎</div>
+        <div class="tool-name">税负自查</div>
+        <div class="tool-desc">多维度税负率分析，对比行业基准，识别异常波动。自动生成改善建议，帮助成长型企业合理控制税负水平。</div>
+        <div class="tool-tags"><span class="tag silver">银级专属</span><span class="tag blue">税负分析</span><span class="tag green">对比行业</span></div>
+        <a href="https://sparrow528.github.io/silver-toolbox/tax-checkup/" class="btn btn-primary" target="_blank">👉 进入工具</a>
       </div>
     </div>
-
     <div class="tool-card">
       <div class="tool-card-body">
-        <div class="tool-icon">💰</div>
-        <div class="tool-name">企业现金流压力测试</div>
-        <div class="tool-desc">5大维度12项指标全面评估现金流健康度：流动性、现金循环周期、现金流质量、偿债能力。支持收入下降、应收延期等压力场景模拟，预测企业在压力下的资金承受能力。</div>
-        <div class="tool-tags">
-          <span class="tag primary">银级专属</span>
-          <span class="tag green">压力模拟</span>
-          <span class="tag">流动性</span>
-          <span class="tag">偿债能力</span>
-        </div>
-        <a href="https://sparrow528.github.io/cashflow-checkup/" class="btn btn-primary" target="_blank">👉 进入工具</a>
+        <div class="tool-icon">💧</div>
+        <div class="tool-name">现金流压力测试</div>
+        <div class="tool-desc">模拟多种经营场景下的现金流状况，识别资金断裂风险。支持收入下滑、账期延长、突增支出等压力情景评估。</div>
+        <div class="tool-tags"><span class="tag silver">银级专属</span><span class="tag blue">现金流</span><span class="tag green">压力测试</span></div>
+        <a href="https://sparrow528.github.io/silver-toolbox/cashflow-checkup/" class="btn btn-primary" target="_blank">👉 进入工具</a>
       </div>
     </div>
-
     <div class="tool-card">
       <div class="tool-card-body">
-        <div class="tool-icon">🔍</div>
+        <div class="tool-icon">⚠️</div>
         <div class="tool-name">税务稽查风险自测</div>
-        <div class="tool-desc">模拟税务局选案逻辑，9大维度评估企业被稽查概率。覆盖税负率异常、发票风险、申报规范、行业关注等核心指标，自动生成风险评分与分级，针对性给出改善建议。</div>
-        <div class="tool-tags">
-          <span class="tag primary">银级专属</span>
-          <span class="tag green">稽查预判</span>
-          <span class="tag">税负分析</span>
-          <span class="tag">发票风险</span>
-        </div>
-        <a href="https://sparrow528.github.io/audit-risk-check/" class="btn btn-primary" target="_blank">👉 进入工具</a>
+        <div class="tool-desc">基于税务稽查选案规则，从发票、税负、申报等多维度评估被稽查概率，提前预警高风险指标，给出整改优先级。</div>
+        <div class="tool-tags"><span class="tag silver">银级专属</span><span class="tag blue">风险预警</span><span class="tag green">稽查评估</span></div>
+        <a href="https://sparrow528.github.io/silver-toolbox/audit-risk-check/" class="btn btn-primary" target="_blank">👉 进入工具</a>
       </div>
     </div>
-
     <div class="tool-card">
       <div class="tool-card-body">
-        <div class="tool-icon">📑</div>
+        <div class="tool-icon">📄</div>
         <div class="tool-name">发票合规自检</div>
-        <div class="tool-desc">缺进项票、滞留票、异常发票、虚开风险全面筛查。进项端+销项端+管理规范三维度评估，自动生成发票合规评分与风险预警，针对性给出整改建议。</div>
-        <div class="tool-tags">
-          <span class="tag primary">银级专属</span>
-          <span class="tag green">发票风险</span>
-          <span class="tag">虚开预防</span>
-          <span class="tag">滞留票</span>
-        </div>
-        <a href="https://sparrow528.github.io/invoice-check/" class="btn btn-primary" target="_blank">👉 进入工具</a>
+        <div class="tool-desc">全税种发票合规性扫描：虚开风险、异常凭证、连号跳号、作废重开、三流一致等多维度检测，筑牢发票合规防线。</div>
+        <div class="tool-tags"><span class="tag silver">银级专属</span><span class="tag blue">发票合规</span><span class="tag green">风险扫描</span></div>
+        <a href="https://sparrow528.github.io/silver-toolbox/invoice-check/" class="btn btn-primary" target="_blank">👉 进入工具</a>
       </div>
     </div>
-
+    <div class="tool-card">
+      <div class="tool-card-body">
+        <div class="tool-icon">📊</div>
+        <div class="tool-name">汇算清缴自检</div>
+        <div class="tool-desc">企业所得税汇算清缴前全面自查：收入确认、成本扣除、纳税调整、优惠备案等环节，确保申报数据准确无误。</div>
+        <div class="tool-tags"><span class="tag silver">银级专属</span><span class="tag blue">汇算清缴</span><span class="tag green">申报检查</span></div>
+        <a href="https://sparrow528.github.io/silver-toolbox/settlement-check/" class="btn btn-primary" target="_blank">👉 进入工具</a>
+      </div>
+    </div>
     <div class="tool-card">
       <div class="tool-card-body">
         <div class="tool-icon">📈</div>
-        <div class="tool-name">企业所得税汇算清缴自检</div>
-        <div class="tool-desc">收入确认、税前扣除（招待费/广告费/捐赠/工资）、优惠适用（研发加计/小微优惠/亏损弥补）、申报合规四大维度15项检查，帮助企业提前排查汇算清缴风险点。</div>
-        <div class="tool-tags">
-          <span class="tag primary">银级专属</span>
-          <span class="tag green">汇算清缴</span>
-          <span class="tag">纳税调整</span>
-          <span class="tag">优惠适用</span>
-        </div>
-        <a href="https://sparrow528.github.io/settlement-check/" class="btn btn-primary" target="_blank">👉 进入工具</a>
+        <div class="tool-name">企业成本费用分析</div>
+        <div class="tool-desc">深入分析企业成本费用结构，识别异常波动与不合理支出。支持同业对标、趋势分析，助力降本增效决策。</div>
+        <div class="tool-tags"><span class="tag silver">银级专属</span><span class="tag blue">成本分析</span><span class="tag green">降本增效</span></div>
+        <a href="https://sparrow528.github.io/silver-toolbox/cost-analysis/" class="btn btn-primary" target="_blank">👉 进入工具</a>
       </div>
     </div>
-
-    <div class="tool-card">
-      <div class="tool-card-body">
-        <div class="tool-icon">📉</div>
-        <div class="tool-name">企业成本费用分析</div>
-        <div class="tool-desc">成本结构与费用构成深度分析：直接成本率、间接费用率、三费占比、成本费用利润率。行业横向对比，自动识别成本异常项与费用浪费点，帮助企业降本增效。</div>
-        <div class="tool-tags">
-          <span class="tag primary">银级专属</span>
-          <span class="tag green">成本管控</span>
-          <span class="tag">费用分析</span>
-          <span class="tag">降本增效</span>
-        </div>
-        <a href="https://sparrow528.github.io/cost-analysis/" class="btn btn-primary" target="_blank">👉 进入工具</a>
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- 企业综合财税雷达图已移除，银级现为6个工具 -->
-
   </div>
-</div>
 
-<div class="section">
+  <!-- 服务清单 -->
   <div class="section-title">
-    <h2>📋 银级会员 · 服务清单</h2>
-    <p>除工具外，您还享有以下专业服务</p>
+    <h2>📋 服务清单</h2>
+    <p>包含铜级全部基础服务 + 以下银级专属增值服务</p>
   </div>
   <div class="service-list">
-    <div class="service-item"><span class="check">✓</span><span class="label">铜级全部基础服务（含3大工具）</span></div>
+    <div class="service-list-title">🥉 铜级基础服务 <span class="sub">全部包含</span></div>
     <div class="service-item"><span class="check">✓</span><span class="label">月度/季度纳税申报审核</span></div>
     <div class="service-item"><span class="check">✓</span><span class="label">发票使用合规性基础检查</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">增值税/所得税/附加税全流程复核</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">线上财税咨询（不限次）</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">季度税负波动分析与优化建议报告（每季度书面报告）</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">每季度1次上门服务（含记账凭证审核+模拟检查+季度会议）</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">代账公司记账凭证质量审核（每季度1次，与上门同日）</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">财务制度初建（费用报销/开票流程）</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">专项筹划（每年2项，任选：税负优化/优惠申报/股权架构/业务重组/稽查应对/合同审阅）</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">协助准备稽查备查资料（线上指导）</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">年度模拟税务检查（上门实物检查）</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">季度财税风险报告</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">7×12小时专属顾问群（8:00~20:00，全年无休）</span></div>
-    <div class="service-item"><span class="check">✓</span><span class="label">24小时内响应</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">3大铜级专属检测工具</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">线上财税咨询（10次/年）</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">重点风险预警（零申报/税负率异常）</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">年度税务健康检查</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">财税政策月度简报</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">稽查初步应对话术指导</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">48小时内响应</span></div>
+    <div class="service-list-title">🥈 银级专属服务 <span class="sub">额外尊享</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">纳税申报审核</span><span class="tag-new">新增</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">税务复核</span><span class="tag-new">新增</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">不限次线上财税咨询</span><span class="tag-new">升级</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">季度上门深度服务</span><span class="tag-new">新增</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">专项税务筹划（2项/年）</span><span class="tag-new">新增</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">年度模拟税务检查</span><span class="tag-new">新增</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">7×12h 专属顾问服务群</span><span class="tag-new">新增</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">24小时内极速响应</span><span class="tag-new">升级</span></div>
+    <div class="service-item"><span class="check">✓</span><span class="label">6大银级专属检测工具</span><span class="tag-new">核心</span></div>
   </div>
-</div>
 
-<div class="section">
+  <!-- 了解完整会员方案 -->
+  <div class="membership-cta">
+    <h3>📋 查看完整会员方案</h3>
+    <p>了解铜级/银级/金级全部权益对比<br>选择最适合您企业阶段的财税服务方案</p>
+    <a href="https://sparrow528.github.io/tax-membership/" class="btn-cta" target="_blank">查看完整方案 →</a>
+  </div>
+
+  <!-- 升级金级 -->
   <div class="upsell-banner">
     <h3>🥇 升级金级会员</h3>
-    <p>享研发费用合规自查 + 高新认定自评等11大金级工具 + 银级全部6大工具</p>
-    <a href="https://sparrow528.github.io/tax-membership/" class="btn" target="_blank">了解金级方案 →</a>
+    <p>享11大专属工具 + 稽查陪护不限次 + 每月上门 + 紧急4h响应，战略级财税服务</p>
+    <a href="https://sparrow528.github.io/gold-toolbox/" class="btn" target="_blank">了解金级方案 →</a>
   </div>
-</div>
 
-<div class="footer">
-  <p>宇守信投资管理咨询（北京）有限公司 © 2026</p>
-  <p style="margin-top:4px;">洪淳宇 · 186-0129-4989 · hongchunyu042896</p>
+  <div class="footer">
+    <p>宇守信投资管理咨询（北京）有限公司 © 2026</p>
+    <p style="margin-top:4px;">洪淳宇 · 186-0129-4989 · hongchunyu042896</p>
+  </div>
+
 </div>
 </body>
 </html>
